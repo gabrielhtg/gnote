@@ -18,16 +18,27 @@ def list() :
         print("Your note is empty.")
         
 def add() :
-    nama_file = sys.argv[2]
-    os.system("nano ~/gnote/list/" + nama_file)
+    try : 
+        nama_file = sys.argv[2]
+        os.system("nano ~/gnote/list/" + nama_file)
+    except IndexError :
+        print("Make sure your command is correct.")
         
 def remove() :
-    nama_file = sys.argv[2]
-    os.system("rm ~/gnote/list/" + nama_file)
-    
+    try :
+        nama_file = sys.argv[2]
+        os.system("rm ~/gnote/list/" + nama_file)
+        
+    except IndexError :
+        print("Make sure your command is correct.")
+        
 def view() :
-    nama_file = sys.argv[2]
-    os.system("cat ~/gnote/list/" + nama_file)
+    
+    try :
+        nama_file = sys.argv[2]
+        os.system("cat ~/gnote/list/" + nama_file)
+    except IndexError:
+        print("Make sure your command is correct.")
 
     
 def copy() :
@@ -37,7 +48,14 @@ def copy() :
             salin = file.read()
         pyperclip.copy(salin)
         print("Copied") 
-    except :
+        
+    # except UnboundLocalError :
+    #     print("Make sure your command is correct.")
+        
+    except IndexError :
+        print("Make sure your command is correct.")
+        
+    except FileNotFoundError :
         print("Note " + nama_file + " not found")
     
 def help() :
