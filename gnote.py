@@ -38,7 +38,7 @@ def copy() :
         pyperclip.copy(salin)
         print("Copied") 
     except :
-        print("Note" + nama_file + "not found")
+        print("Note " + nama_file + " not found")
     
 def help() :
     print("USAGE")
