@@ -27,10 +27,8 @@ def remove() :
     
 def view() :
     nama_file = sys.argv[2]
-    try : 
-        os.system("cat ~/gnote/list/" + nama_file)
-    except :
-        print("Note not found")
+    os.system("cat ~/gnote/list/" + nama_file)
+
     
 def copy() :
     try :
@@ -40,7 +38,7 @@ def copy() :
         pyperclip.copy(salin)
         print("Copied") 
     except :
-        print("Note not found")
+        print("Note" + nama_file + "not found")
     
 def help() :
     print("USAGE")
