@@ -60,12 +60,12 @@ def copy() :
     
 def help() :
     print("USAGE")
-    print("    gnote add [note_name]")
-    print("    gnote view [note_name]")
-    print("    gnote remove [note_name]")
-    print("    gnote list") 
-    print("    gnote copy [note_name]")
-    print("    gnote version")
+    print("    note add [note_name]")
+    print("    note view [note_name]")
+    print("    note remove [note_name]")
+    print("    note list") 
+    print("    note copy [note_name]")
+    print("    note version")
     print("OPTIONS")
     print("    add          Add new note or edit a note")
     print("    view         See the contents of the note")
